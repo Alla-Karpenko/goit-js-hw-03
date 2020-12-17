@@ -1,13 +1,14 @@
 const findBestEmployee = function (employees) {
-    
-let max = 0;
-let topName = '';
-
-for (let [name, salary] of Object.entries(employees)) {
-[topName, max] = salary < max? [topName, max] : [name, salary];
-}
-    return topName;  
-
+  let bestUser = '';
+  let bestScore = 0;
+  const keys = Object.keys(employees);
+  for (const key of keys) {
+    if (employees[key] > bestScore) {
+      bestUser = key;
+      bestScore = employees[key];
+    }
+  }
+  return bestUser;
 }
 
 
