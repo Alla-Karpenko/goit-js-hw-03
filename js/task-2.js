@@ -1,15 +1,15 @@
 const countProps = function (obj) {
     const keys = Object.keys(obj);
-    console.log(keys.length)
-    return obj; 
+   
+    return Object.keys(obj).length; 
 }
 
 
-console.table(countProps({})); // 0
+console.log(countProps({})); // 0
 
-console.table(countProps({ name: 'Mango', age: 2 })); // 2
+console.log(countProps({ name: 'Mango', age: 2 })); // 2
 
-console.table(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
 
 
 
